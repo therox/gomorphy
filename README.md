@@ -194,11 +194,26 @@ patterns). Ambiguous forms ("Иванова" — F Nom or M Gen?) are resolved
 using the gender hint from neighbouring components; without a hint,
 F is preferred (more common interpretation).
 
-## Dictionary license
+## License
 
-The OpenCorpora dictionary is distributed under the CC BY-SA license.
-It is not bundled with this repository — `cmd/builddict` expects a
-locally downloaded XML dump.
+This project uses a split-license model — different parts of the
+distribution are covered by different licenses:
+
+- **Source code and test fixtures** (everything under `*.go`, `cmd/`,
+  `internal/`, `testdata/`): [MIT License](LICENSE).
+  `testdata/sample.xml` is a hand-written micro-sample composed from
+  scratch — it reuses OpenCorpora's XML format but the lemmas and forms
+  are common Russian-language facts, not extracted from the OpenCorpora
+  dump.
+- **OpenCorpora dictionary** (downloaded separately by the user from
+  [opencorpora.org](https://opencorpora.org/); `cmd/builddict` only
+  converts the local XML dump into a compact `.bin`):
+  [CC BY-SA](https://creativecommons.org/licenses/by-sa/4.0/),
+  © OpenCorpora contributors. Not bundled with this repository.
+
+If you redistribute a built `.bin` (compiled from the OpenCorpora dump)
+as part of your own project, that artifact remains under CC BY-SA — the
+MIT license covers only the source code that produces and reads it.
 
 ## Documentation
 
