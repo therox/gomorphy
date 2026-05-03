@@ -64,4 +64,39 @@ func main() {
 		}
 		fmt.Printf("  %s: %s %s %s\n", c, got.Last, got.First, got.Patronymic)
 	}
+
+	// === ShortName: full name → "Surname I. P." short form. ===
+	// Works on any FullName, so it composes naturally with ParseFullName for
+	// free-form input.
+	for _, s := range []string{
+		"Иванов Иван Иванович",
+		"Ивановой Анне Сергеевне",
+		"Иван Иванович Иванов",
+		"Иванов Иван",
+	} {
+		fn, err := gomorphy.ParseFullName(s)
+		if err != nil {
+			log.Fatal(err)
+		}
+		fmt.Printf("ShortName(%q) → %s\n", s, gomorphy.ShortName(fn))
+	}
+
+	// Direct call without parsing — when the components are already known.
+	fmt.Println("ShortName(struct):",
+		gomorphy.ShortName(gomorphy.FullName{
+			Last: "Достоевская", First: "Анна", Patronymic: "Григорьевна",
+		}))
+
+	// ShortName preserves whatever case is in the input. Combine with
+	// DeclineFullName to get the short form in any case.
+	annaNom := gomorphy.FullName{Last: "Иванова", First: "Анна", Patronymic: "Сергеевна"}
+	for _, c := range []gomorphy.Case{
+		gomorphy.Nominative, gomorphy.Genitive, gomorphy.Dative, gomorphy.Instrumental,
+	} {
+		got, err := gomorphy.DeclineFullName(annaNom, c)
+		if err != nil {
+			log.Fatal(err)
+		}
+		fmt.Printf("ShortName(%s): %s\n", c, gomorphy.ShortName(got))
+	}
 }
