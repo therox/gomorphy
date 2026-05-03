@@ -1,4 +1,8 @@
-# gomorphy
+<p align="center">
+  <img src="assets/mikhalich.png" alt="Mikhalich — gomorphy mascot" width="180">
+</p>
+
+<h1 align="center">gomorphy</h1>
 
 Dictionary-based library for Russian morphology: declension of nouns,
 adjectives and full names (FIO), agreement with numerals, morphological
