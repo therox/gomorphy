@@ -13,7 +13,7 @@ Implemented: `Decline`, `DeclineAdj`, `Agree`, `GenderOf`, `PluralOf`,
 forward and inverse heuristics for patronymics and surnames not present
 in the dictionary.
 
-> Russian-language README: [README.md](README.md).
+> Russian-language README: [README.ru.md](README.ru.md).
 
 ## Install
 

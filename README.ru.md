@@ -12,7 +12,7 @@
 `Parse`, `DeclineFullName`, `ToNominative`, `ParseFullName` — включая
 прямые и обратные эвристики для несловарных отчеств и фамилий.
 
-> English README: [README.en.md](README.en.md).
+> English README: [README.md](README.md).
 
 ## Установка
 
