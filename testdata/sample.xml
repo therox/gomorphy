@@ -1,0 +1,626 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Hand-picked selection of lemmas in OpenCorpora format for Phase 2 tests.
+  Paradigms for words explicitly used in the tests (аппетит, книга, окно,
+  путь, время, дитя, мать, ножницы, яблоко, ребёнок, сталь, сирота, красный)
+  are filled in completely. Other lemmas are kept with a shortened set of
+  forms — they exist only for smoke-checking the parser and the index.
+
+  Coverage:
+    - nouns: masculine/feminine/neuter, animate/inanimate, zero ending
+    - exceptions: время, путь, дитя, мать, дочь
+    - pluralia tantum: ножницы, сани, сутки
+    - indeclinable: кофе, метро, пальто
+    - ADJF adjectives: hard/soft variants, -ый/-ий/-ой
+    - first names (Name), patronymics (Patr), surnames (Surn), indeclinable foreign
+    - homonymy of the word form «стали» (lemma «сталь»)
+    - common gender: сирота
+    - suppletive pair ребёнок/дети
+-->
+<dictionary version="0.92" revision="0">
+<grammemes>
+</grammemes>
+<restrictions>
+</restrictions>
+<lemmata>
+
+<!-- ===== Masculine nouns ===== -->
+
+<lemma id="1" rev="1">
+  <l t="стол"><g v="NOUN"/><g v="inan"/><g v="masc"/></l>
+  <f t="стол"><g v="sing"/><g v="nomn"/></f>
+  <f t="стола"><g v="sing"/><g v="gent"/></f>
+  <f t="столу"><g v="sing"/><g v="datv"/></f>
+  <f t="стол"><g v="sing"/><g v="accs"/></f>
+  <f t="столом"><g v="sing"/><g v="ablt"/></f>
+  <f t="столе"><g v="sing"/><g v="loct"/></f>
+  <f t="столы"><g v="plur"/><g v="nomn"/></f>
+  <f t="столов"><g v="plur"/><g v="gent"/></f>
+</lemma>
+
+<lemma id="2" rev="1">
+  <l t="конь"><g v="NOUN"/><g v="anim"/><g v="masc"/></l>
+  <f t="конь"><g v="sing"/><g v="nomn"/></f>
+  <f t="коня"><g v="sing"/><g v="gent"/></f>
+  <f t="коню"><g v="sing"/><g v="datv"/></f>
+  <f t="коня"><g v="sing"/><g v="accs"/></f>
+  <f t="конём"><g v="sing"/><g v="ablt"/></f>
+  <f t="коне"><g v="sing"/><g v="loct"/></f>
+  <f t="кони"><g v="plur"/><g v="nomn"/></f>
+</lemma>
+
+<lemma id="3" rev="1">
+  <l t="край"><g v="NOUN"/><g v="inan"/><g v="masc"/></l>
+  <f t="край"><g v="sing"/><g v="nomn"/></f>
+  <f t="края"><g v="sing"/><g v="gent"/></f>
+  <f t="краю"><g v="sing"/><g v="datv"/></f>
+</lemma>
+
+<lemma id="4" rev="1">
+  <l t="путь"><g v="NOUN"/><g v="inan"/><g v="masc"/></l>
+  <f t="путь"><g v="sing"/><g v="nomn"/></f>
+  <f t="пути"><g v="sing"/><g v="gent"/></f>
+  <f t="пути"><g v="sing"/><g v="datv"/></f>
+  <f t="путь"><g v="sing"/><g v="accs"/></f>
+  <f t="путём"><g v="sing"/><g v="ablt"/></f>
+  <f t="пути"><g v="sing"/><g v="loct"/></f>
+  <f t="пути"><g v="plur"/><g v="nomn"/></f>
+  <f t="путей"><g v="plur"/><g v="gent"/></f>
+  <f t="путям"><g v="plur"/><g v="datv"/></f>
+  <f t="пути"><g v="plur"/><g v="accs"/></f>
+  <f t="путями"><g v="plur"/><g v="ablt"/></f>
+  <f t="путях"><g v="plur"/><g v="loct"/></f>
+</lemma>
+
+<lemma id="5" rev="1">
+  <l t="дом"><g v="NOUN"/><g v="inan"/><g v="masc"/></l>
+  <f t="дом"><g v="sing"/><g v="nomn"/></f>
+  <f t="дома"><g v="sing"/><g v="gent"/></f>
+  <f t="дома"><g v="plur"/><g v="nomn"/></f>
+</lemma>
+
+<lemma id="6" rev="1">
+  <l t="учитель"><g v="NOUN"/><g v="anim"/><g v="masc"/></l>
+  <f t="учитель"><g v="sing"/><g v="nomn"/></f>
+  <f t="учителя"><g v="sing"/><g v="gent"/></f>
+  <f t="учителя"><g v="plur"/><g v="nomn"/></f>
+</lemma>
+
+<lemma id="7" rev="1">
+  <l t="человек"><g v="NOUN"/><g v="anim"/><g v="masc"/></l>
+  <f t="человек"><g v="sing"/><g v="nomn"/></f>
+  <f t="человека"><g v="sing"/><g v="gent"/></f>
+  <f t="люди"><g v="plur"/><g v="nomn"/></f>
+</lemma>
+
+<lemma id="8" rev="1">
+  <l t="ёж"><g v="NOUN"/><g v="anim"/><g v="masc"/></l>
+  <f t="ёж"><g v="sing"/><g v="nomn"/></f>
+  <f t="ежа"><g v="sing"/><g v="gent"/></f>
+  <f t="ежи"><g v="plur"/><g v="nomn"/></f>
+</lemma>
+
+<lemma id="100" rev="1">
+  <l t="аппетит"><g v="NOUN"/><g v="inan"/><g v="masc"/></l>
+  <f t="аппетит"><g v="sing"/><g v="nomn"/></f>
+  <f t="аппетита"><g v="sing"/><g v="gent"/></f>
+  <f t="аппетиту"><g v="sing"/><g v="datv"/></f>
+  <f t="аппетит"><g v="sing"/><g v="accs"/></f>
+  <f t="аппетитом"><g v="sing"/><g v="ablt"/></f>
+  <f t="аппетите"><g v="sing"/><g v="loct"/></f>
+  <f t="аппетиты"><g v="plur"/><g v="nomn"/></f>
+  <f t="аппетитов"><g v="plur"/><g v="gent"/></f>
+  <f t="аппетитам"><g v="plur"/><g v="datv"/></f>
+  <f t="аппетиты"><g v="plur"/><g v="accs"/></f>
+  <f t="аппетитами"><g v="plur"/><g v="ablt"/></f>
+  <f t="аппетитах"><g v="plur"/><g v="loct"/></f>
+</lemma>
+
+<lemma id="101" rev="1">
+  <l t="ребёнок"><g v="NOUN"/><g v="anim"/><g v="masc"/></l>
+  <f t="ребёнок"><g v="sing"/><g v="nomn"/></f>
+  <f t="ребёнка"><g v="sing"/><g v="gent"/></f>
+  <f t="ребёнку"><g v="sing"/><g v="datv"/></f>
+  <f t="ребёнка"><g v="sing"/><g v="accs"/></f>
+  <f t="ребёнком"><g v="sing"/><g v="ablt"/></f>
+  <f t="ребёнке"><g v="sing"/><g v="loct"/></f>
+  <f t="дети"><g v="plur"/><g v="nomn"/></f>
+  <f t="детей"><g v="plur"/><g v="gent"/></f>
+  <f t="детям"><g v="plur"/><g v="datv"/></f>
+  <f t="детей"><g v="plur"/><g v="accs"/></f>
+  <f t="детьми"><g v="plur"/><g v="ablt"/></f>
+  <f t="детях"><g v="plur"/><g v="loct"/></f>
+</lemma>
+
+<!-- ===== Feminine nouns ===== -->
+
+<lemma id="9" rev="1">
+  <l t="книга"><g v="NOUN"/><g v="inan"/><g v="femn"/></l>
+  <f t="книга"><g v="sing"/><g v="nomn"/></f>
+  <f t="книги"><g v="sing"/><g v="gent"/></f>
+  <f t="книге"><g v="sing"/><g v="datv"/></f>
+  <f t="книгу"><g v="sing"/><g v="accs"/></f>
+  <f t="книгой"><g v="sing"/><g v="ablt"/></f>
+  <f t="книге"><g v="sing"/><g v="loct"/></f>
+  <f t="книги"><g v="plur"/><g v="nomn"/></f>
+  <f t="книг"><g v="plur"/><g v="gent"/></f>
+  <f t="книгам"><g v="plur"/><g v="datv"/></f>
+  <f t="книги"><g v="plur"/><g v="accs"/></f>
+  <f t="книгами"><g v="plur"/><g v="ablt"/></f>
+  <f t="книгах"><g v="plur"/><g v="loct"/></f>
+</lemma>
+
+<lemma id="10" rev="1">
+  <l t="земля"><g v="NOUN"/><g v="inan"/><g v="femn"/></l>
+  <f t="земля"><g v="sing"/><g v="nomn"/></f>
+  <f t="земли"><g v="sing"/><g v="gent"/></f>
+  <f t="земле"><g v="sing"/><g v="datv"/></f>
+</lemma>
+
+<lemma id="11" rev="1">
+  <l t="ночь"><g v="NOUN"/><g v="inan"/><g v="femn"/></l>
+  <f t="ночь"><g v="sing"/><g v="nomn"/></f>
+  <f t="ночи"><g v="sing"/><g v="gent"/></f>
+  <f t="ночью"><g v="sing"/><g v="ablt"/></f>
+</lemma>
+
+<lemma id="12" rev="1">
+  <l t="дочь"><g v="NOUN"/><g v="anim"/><g v="femn"/></l>
+  <f t="дочь"><g v="sing"/><g v="nomn"/></f>
+  <f t="дочери"><g v="sing"/><g v="gent"/></f>
+  <f t="дочерью"><g v="sing"/><g v="ablt"/></f>
+  <f t="дочери"><g v="plur"/><g v="nomn"/></f>
+</lemma>
+
+<lemma id="13" rev="1">
+  <l t="мать"><g v="NOUN"/><g v="anim"/><g v="femn"/></l>
+  <f t="мать"><g v="sing"/><g v="nomn"/></f>
+  <f t="матери"><g v="sing"/><g v="gent"/></f>
+  <f t="матери"><g v="sing"/><g v="datv"/></f>
+  <f t="мать"><g v="sing"/><g v="accs"/></f>
+  <f t="матерью"><g v="sing"/><g v="ablt"/></f>
+  <f t="матери"><g v="sing"/><g v="loct"/></f>
+  <f t="матери"><g v="plur"/><g v="nomn"/></f>
+  <f t="матерей"><g v="plur"/><g v="gent"/></f>
+  <f t="матерям"><g v="plur"/><g v="datv"/></f>
+  <f t="матерей"><g v="plur"/><g v="accs"/></f>
+  <f t="матерями"><g v="plur"/><g v="ablt"/></f>
+  <f t="матерях"><g v="plur"/><g v="loct"/></f>
+</lemma>
+
+<lemma id="14" rev="1">
+  <l t="лошадь"><g v="NOUN"/><g v="anim"/><g v="femn"/></l>
+  <f t="лошадь"><g v="sing"/><g v="nomn"/></f>
+  <f t="лошади"><g v="sing"/><g v="gent"/></f>
+  <f t="лошади"><g v="plur"/><g v="nomn"/></f>
+</lemma>
+
+<lemma id="15" rev="1">
+  <l t="кость"><g v="NOUN"/><g v="inan"/><g v="femn"/></l>
+  <f t="кость"><g v="sing"/><g v="nomn"/></f>
+  <f t="кости"><g v="sing"/><g v="gent"/></f>
+  <f t="кости"><g v="plur"/><g v="nomn"/></f>
+</lemma>
+
+<lemma id="102" rev="1">
+  <l t="сталь"><g v="NOUN"/><g v="inan"/><g v="femn"/></l>
+  <f t="сталь"><g v="sing"/><g v="nomn"/></f>
+  <f t="стали"><g v="sing"/><g v="gent"/></f>
+  <f t="стали"><g v="sing"/><g v="datv"/></f>
+  <f t="сталь"><g v="sing"/><g v="accs"/></f>
+  <f t="сталью"><g v="sing"/><g v="ablt"/></f>
+  <f t="стали"><g v="sing"/><g v="loct"/></f>
+  <f t="стали"><g v="plur"/><g v="nomn"/></f>
+  <f t="сталей"><g v="plur"/><g v="gent"/></f>
+  <f t="сталям"><g v="plur"/><g v="datv"/></f>
+  <f t="стали"><g v="plur"/><g v="accs"/></f>
+  <f t="сталями"><g v="plur"/><g v="ablt"/></f>
+  <f t="сталях"><g v="plur"/><g v="loct"/></f>
+</lemma>
+
+<!-- ===== Common-gender nouns ===== -->
+
+<lemma id="103" rev="1">
+  <l t="сирота"><g v="NOUN"/><g v="anim"/><g v="ms-f"/></l>
+  <f t="сирота"><g v="sing"/><g v="nomn"/></f>
+  <f t="сироты"><g v="sing"/><g v="gent"/></f>
+  <f t="сироте"><g v="sing"/><g v="datv"/></f>
+  <f t="сироту"><g v="sing"/><g v="accs"/></f>
+  <f t="сиротой"><g v="sing"/><g v="ablt"/></f>
+  <f t="сироте"><g v="sing"/><g v="loct"/></f>
+  <f t="сироты"><g v="plur"/><g v="nomn"/></f>
+  <f t="сирот"><g v="plur"/><g v="gent"/></f>
+</lemma>
+
+<!-- ===== Neuter nouns ===== -->
+
+<lemma id="16" rev="1">
+  <l t="окно"><g v="NOUN"/><g v="inan"/><g v="neut"/></l>
+  <f t="окно"><g v="sing"/><g v="nomn"/></f>
+  <f t="окна"><g v="sing"/><g v="gent"/></f>
+  <f t="окну"><g v="sing"/><g v="datv"/></f>
+  <f t="окно"><g v="sing"/><g v="accs"/></f>
+  <f t="окном"><g v="sing"/><g v="ablt"/></f>
+  <f t="окне"><g v="sing"/><g v="loct"/></f>
+  <f t="окна"><g v="plur"/><g v="nomn"/></f>
+  <f t="окон"><g v="plur"/><g v="gent"/></f>
+  <f t="окнам"><g v="plur"/><g v="datv"/></f>
+  <f t="окна"><g v="plur"/><g v="accs"/></f>
+  <f t="окнами"><g v="plur"/><g v="ablt"/></f>
+  <f t="окнах"><g v="plur"/><g v="loct"/></f>
+</lemma>
+
+<lemma id="17" rev="1">
+  <l t="море"><g v="NOUN"/><g v="inan"/><g v="neut"/></l>
+  <f t="море"><g v="sing"/><g v="nomn"/></f>
+  <f t="моря"><g v="sing"/><g v="gent"/></f>
+  <f t="моря"><g v="plur"/><g v="nomn"/></f>
+</lemma>
+
+<lemma id="18" rev="1">
+  <l t="время"><g v="NOUN"/><g v="inan"/><g v="neut"/></l>
+  <f t="время"><g v="sing"/><g v="nomn"/></f>
+  <f t="времени"><g v="sing"/><g v="gent"/></f>
+  <f t="времени"><g v="sing"/><g v="datv"/></f>
+  <f t="время"><g v="sing"/><g v="accs"/></f>
+  <f t="временем"><g v="sing"/><g v="ablt"/></f>
+  <f t="времени"><g v="sing"/><g v="loct"/></f>
+  <f t="времена"><g v="plur"/><g v="nomn"/></f>
+  <f t="времён"><g v="plur"/><g v="gent"/></f>
+  <f t="временам"><g v="plur"/><g v="datv"/></f>
+  <f t="времена"><g v="plur"/><g v="accs"/></f>
+  <f t="временами"><g v="plur"/><g v="ablt"/></f>
+  <f t="временах"><g v="plur"/><g v="loct"/></f>
+</lemma>
+
+<lemma id="19" rev="1">
+  <l t="дитя"><g v="NOUN"/><g v="anim"/><g v="neut"/></l>
+  <f t="дитя"><g v="sing"/><g v="nomn"/></f>
+  <f t="дитяти"><g v="sing"/><g v="gent"/></f>
+  <f t="дитяти"><g v="sing"/><g v="datv"/></f>
+  <f t="дитя"><g v="sing"/><g v="accs"/></f>
+  <f t="дитятей"><g v="sing"/><g v="ablt"/></f>
+  <f t="дитяти"><g v="sing"/><g v="loct"/></f>
+  <f t="дети"><g v="plur"/><g v="nomn"/></f>
+  <f t="детей"><g v="plur"/><g v="gent"/></f>
+  <f t="детям"><g v="plur"/><g v="datv"/></f>
+  <f t="детей"><g v="plur"/><g v="accs"/></f>
+  <f t="детьми"><g v="plur"/><g v="ablt"/></f>
+  <f t="детях"><g v="plur"/><g v="loct"/></f>
+</lemma>
+
+<lemma id="20" rev="1">
+  <l t="имя"><g v="NOUN"/><g v="inan"/><g v="neut"/></l>
+  <f t="имя"><g v="sing"/><g v="nomn"/></f>
+  <f t="имени"><g v="sing"/><g v="gent"/></f>
+  <f t="именем"><g v="sing"/><g v="ablt"/></f>
+  <f t="имена"><g v="plur"/><g v="nomn"/></f>
+</lemma>
+
+<lemma id="104" rev="1">
+  <l t="яблоко"><g v="NOUN"/><g v="inan"/><g v="neut"/></l>
+  <f t="яблоко"><g v="sing"/><g v="nomn"/></f>
+  <f t="яблока"><g v="sing"/><g v="gent"/></f>
+  <f t="яблоку"><g v="sing"/><g v="datv"/></f>
+  <f t="яблоко"><g v="sing"/><g v="accs"/></f>
+  <f t="яблоком"><g v="sing"/><g v="ablt"/></f>
+  <f t="яблоке"><g v="sing"/><g v="loct"/></f>
+  <f t="яблоки"><g v="plur"/><g v="nomn"/></f>
+  <f t="яблок"><g v="plur"/><g v="gent"/></f>
+  <f t="яблокам"><g v="plur"/><g v="datv"/></f>
+  <f t="яблоки"><g v="plur"/><g v="accs"/></f>
+  <f t="яблоками"><g v="plur"/><g v="ablt"/></f>
+  <f t="яблоках"><g v="plur"/><g v="loct"/></f>
+</lemma>
+
+<!-- ===== Pluralia tantum ===== -->
+
+<lemma id="21" rev="1">
+  <l t="ножницы"><g v="NOUN"/><g v="inan"/><g v="Pltm"/></l>
+  <f t="ножницы"><g v="plur"/><g v="nomn"/></f>
+  <f t="ножниц"><g v="plur"/><g v="gent"/></f>
+  <f t="ножницам"><g v="plur"/><g v="datv"/></f>
+  <f t="ножницы"><g v="plur"/><g v="accs"/></f>
+  <f t="ножницами"><g v="plur"/><g v="ablt"/></f>
+  <f t="ножницах"><g v="plur"/><g v="loct"/></f>
+</lemma>
+
+<lemma id="22" rev="1">
+  <l t="сани"><g v="NOUN"/><g v="inan"/><g v="Pltm"/></l>
+  <f t="сани"><g v="plur"/><g v="nomn"/></f>
+  <f t="саней"><g v="plur"/><g v="gent"/></f>
+</lemma>
+
+<lemma id="23" rev="1">
+  <l t="сутки"><g v="NOUN"/><g v="inan"/><g v="Pltm"/></l>
+  <f t="сутки"><g v="plur"/><g v="nomn"/></f>
+  <f t="суток"><g v="plur"/><g v="gent"/></f>
+</lemma>
+
+<!-- ===== Indeclinable nouns ===== -->
+
+<lemma id="24" rev="1">
+  <l t="кофе"><g v="NOUN"/><g v="inan"/><g v="masc"/><g v="Fixd"/></l>
+  <f t="кофе"><g v="sing"/><g v="nomn"/></f>
+</lemma>
+
+<lemma id="25" rev="1">
+  <l t="метро"><g v="NOUN"/><g v="inan"/><g v="neut"/><g v="Fixd"/></l>
+  <f t="метро"><g v="sing"/><g v="nomn"/></f>
+</lemma>
+
+<lemma id="26" rev="1">
+  <l t="пальто"><g v="NOUN"/><g v="inan"/><g v="neut"/><g v="Fixd"/></l>
+  <f t="пальто"><g v="sing"/><g v="nomn"/></f>
+</lemma>
+
+<!-- ===== ADJF adjectives ===== -->
+
+<lemma id="27" rev="1">
+  <l t="красный"><g v="ADJF"/><g v="Qual"/></l>
+  <f t="красный"><g v="sing"/><g v="masc"/><g v="nomn"/></f>
+  <f t="красного"><g v="sing"/><g v="masc"/><g v="gent"/></f>
+  <f t="красному"><g v="sing"/><g v="masc"/><g v="datv"/></f>
+  <f t="красным"><g v="sing"/><g v="masc"/><g v="ablt"/></f>
+  <f t="красном"><g v="sing"/><g v="masc"/><g v="loct"/></f>
+  <f t="красная"><g v="sing"/><g v="femn"/><g v="nomn"/></f>
+  <f t="красной"><g v="sing"/><g v="femn"/><g v="gent"/></f>
+  <f t="красной"><g v="sing"/><g v="femn"/><g v="datv"/></f>
+  <f t="красную"><g v="sing"/><g v="femn"/><g v="accs"/></f>
+  <f t="красной"><g v="sing"/><g v="femn"/><g v="ablt"/></f>
+  <f t="красной"><g v="sing"/><g v="femn"/><g v="loct"/></f>
+  <f t="красное"><g v="sing"/><g v="neut"/><g v="nomn"/></f>
+  <f t="красного"><g v="sing"/><g v="neut"/><g v="gent"/></f>
+  <f t="красному"><g v="sing"/><g v="neut"/><g v="datv"/></f>
+  <f t="красное"><g v="sing"/><g v="neut"/><g v="accs"/></f>
+  <f t="красным"><g v="sing"/><g v="neut"/><g v="ablt"/></f>
+  <f t="красном"><g v="sing"/><g v="neut"/><g v="loct"/></f>
+  <f t="красные"><g v="plur"/><g v="nomn"/></f>
+  <f t="красных"><g v="plur"/><g v="gent"/></f>
+  <f t="красным"><g v="plur"/><g v="datv"/></f>
+  <f t="красными"><g v="plur"/><g v="ablt"/></f>
+  <f t="красных"><g v="plur"/><g v="loct"/></f>
+</lemma>
+
+<lemma id="28" rev="1">
+  <l t="синий"><g v="ADJF"/><g v="Qual"/></l>
+  <f t="синий"><g v="sing"/><g v="masc"/><g v="nomn"/></f>
+  <f t="синего"><g v="sing"/><g v="masc"/><g v="gent"/></f>
+  <f t="синяя"><g v="sing"/><g v="femn"/><g v="nomn"/></f>
+  <f t="синее"><g v="sing"/><g v="neut"/><g v="nomn"/></f>
+  <f t="синие"><g v="plur"/><g v="nomn"/></f>
+</lemma>
+
+<lemma id="29" rev="1">
+  <l t="большой"><g v="ADJF"/><g v="Qual"/></l>
+  <f t="большой"><g v="sing"/><g v="masc"/><g v="nomn"/></f>
+  <f t="большого"><g v="sing"/><g v="masc"/><g v="gent"/></f>
+  <f t="большая"><g v="sing"/><g v="femn"/><g v="nomn"/></f>
+  <f t="большое"><g v="sing"/><g v="neut"/><g v="nomn"/></f>
+  <f t="большие"><g v="plur"/><g v="nomn"/></f>
+</lemma>
+
+<lemma id="30" rev="1">
+  <l t="русский"><g v="ADJF"/></l>
+  <f t="русский"><g v="sing"/><g v="masc"/><g v="nomn"/></f>
+  <f t="русского"><g v="sing"/><g v="masc"/><g v="gent"/></f>
+  <f t="русская"><g v="sing"/><g v="femn"/><g v="nomn"/></f>
+  <f t="русское"><g v="sing"/><g v="neut"/><g v="nomn"/></f>
+  <f t="русские"><g v="plur"/><g v="nomn"/></f>
+</lemma>
+
+<lemma id="31" rev="1">
+  <l t="летний"><g v="ADJF"/><g v="Qual"/></l>
+  <f t="летний"><g v="sing"/><g v="masc"/><g v="nomn"/></f>
+  <f t="летнего"><g v="sing"/><g v="masc"/><g v="gent"/></f>
+  <f t="летняя"><g v="sing"/><g v="femn"/><g v="nomn"/></f>
+  <f t="летнее"><g v="sing"/><g v="neut"/><g v="nomn"/></f>
+  <f t="летние"><g v="plur"/><g v="nomn"/></f>
+</lemma>
+
+<lemma id="32" rev="1">
+  <l t="стальной"><g v="ADJF"/></l>
+  <f t="стальной"><g v="sing"/><g v="masc"/><g v="nomn"/></f>
+  <f t="стального"><g v="sing"/><g v="masc"/><g v="gent"/></f>
+  <f t="стальная"><g v="sing"/><g v="femn"/><g v="nomn"/></f>
+  <f t="стальное"><g v="sing"/><g v="neut"/><g v="nomn"/></f>
+  <f t="стальные"><g v="plur"/><g v="nomn"/></f>
+</lemma>
+
+<!-- ===== Proper names: first names ===== -->
+
+<lemma id="33" rev="1">
+  <l t="иван"><g v="NOUN"/><g v="anim"/><g v="masc"/><g v="Name"/></l>
+  <f t="иван"><g v="sing"/><g v="nomn"/></f>
+  <f t="ивана"><g v="sing"/><g v="gent"/></f>
+  <f t="ивану"><g v="sing"/><g v="datv"/></f>
+  <f t="ивана"><g v="sing"/><g v="accs"/></f>
+  <f t="иваном"><g v="sing"/><g v="ablt"/></f>
+  <f t="иване"><g v="sing"/><g v="loct"/></f>
+</lemma>
+
+<lemma id="34" rev="1">
+  <l t="александр"><g v="NOUN"/><g v="anim"/><g v="masc"/><g v="Name"/></l>
+  <f t="александр"><g v="sing"/><g v="nomn"/></f>
+  <f t="александра"><g v="sing"/><g v="gent"/></f>
+  <f t="александру"><g v="sing"/><g v="datv"/></f>
+  <f t="александра"><g v="sing"/><g v="accs"/></f>
+  <f t="александром"><g v="sing"/><g v="ablt"/></f>
+  <f t="александре"><g v="sing"/><g v="loct"/></f>
+</lemma>
+
+<lemma id="35" rev="1">
+  <l t="мария"><g v="NOUN"/><g v="anim"/><g v="femn"/><g v="Name"/></l>
+  <f t="мария"><g v="sing"/><g v="nomn"/></f>
+  <f t="марии"><g v="sing"/><g v="gent"/></f>
+  <f t="марии"><g v="sing"/><g v="datv"/></f>
+  <f t="марию"><g v="sing"/><g v="accs"/></f>
+  <f t="марией"><g v="sing"/><g v="ablt"/></f>
+  <f t="марии"><g v="sing"/><g v="loct"/></f>
+</lemma>
+
+<lemma id="36" rev="1">
+  <l t="анна"><g v="NOUN"/><g v="anim"/><g v="femn"/><g v="Name"/></l>
+  <f t="анна"><g v="sing"/><g v="nomn"/></f>
+  <f t="анны"><g v="sing"/><g v="gent"/></f>
+  <f t="анне"><g v="sing"/><g v="datv"/></f>
+  <f t="анну"><g v="sing"/><g v="accs"/></f>
+  <f t="анной"><g v="sing"/><g v="ablt"/></f>
+  <f t="анне"><g v="sing"/><g v="loct"/></f>
+</lemma>
+
+<lemma id="60" rev="1">
+  <l t="дмитрий"><g v="NOUN"/><g v="anim"/><g v="masc"/><g v="Name"/></l>
+  <f t="дмитрий"><g v="sing"/><g v="nomn"/></f>
+  <f t="дмитрия"><g v="sing"/><g v="gent"/></f>
+  <f t="дмитрию"><g v="sing"/><g v="datv"/></f>
+  <f t="дмитрия"><g v="sing"/><g v="accs"/></f>
+  <f t="дмитрием"><g v="sing"/><g v="ablt"/></f>
+  <f t="дмитрии"><g v="sing"/><g v="loct"/></f>
+</lemma>
+
+<lemma id="61" rev="1">
+  <l t="ольга"><g v="NOUN"/><g v="anim"/><g v="femn"/><g v="Name"/></l>
+  <f t="ольга"><g v="sing"/><g v="nomn"/></f>
+  <f t="ольги"><g v="sing"/><g v="gent"/></f>
+  <f t="ольге"><g v="sing"/><g v="datv"/></f>
+  <f t="ольгу"><g v="sing"/><g v="accs"/></f>
+  <f t="ольгой"><g v="sing"/><g v="ablt"/></f>
+  <f t="ольге"><g v="sing"/><g v="loct"/></f>
+</lemma>
+
+<lemma id="62" rev="1">
+  <l t="жозе"><g v="NOUN"/><g v="anim"/><g v="masc"/><g v="Name"/><g v="Fixd"/></l>
+  <f t="жозе"><g v="sing"/><g v="nomn"/></f>
+</lemma>
+
+<!-- ===== Proper names: patronymics ===== -->
+
+<lemma id="37" rev="1">
+  <l t="иванович"><g v="NOUN"/><g v="anim"/><g v="masc"/><g v="Patr"/></l>
+  <f t="иванович"><g v="sing"/><g v="nomn"/></f>
+  <f t="ивановича"><g v="sing"/><g v="gent"/></f>
+  <f t="ивановичу"><g v="sing"/><g v="datv"/></f>
+</lemma>
+
+<lemma id="38" rev="1">
+  <l t="петрович"><g v="NOUN"/><g v="anim"/><g v="masc"/><g v="Patr"/></l>
+  <f t="петрович"><g v="sing"/><g v="nomn"/></f>
+  <f t="петровича"><g v="sing"/><g v="gent"/></f>
+</lemma>
+
+<lemma id="39" rev="1">
+  <l t="петровна"><g v="NOUN"/><g v="anim"/><g v="femn"/><g v="Patr"/></l>
+  <f t="петровна"><g v="sing"/><g v="nomn"/></f>
+  <f t="петровны"><g v="sing"/><g v="gent"/></f>
+</lemma>
+
+<lemma id="40" rev="1">
+  <l t="ивановна"><g v="NOUN"/><g v="anim"/><g v="femn"/><g v="Patr"/></l>
+  <f t="ивановна"><g v="sing"/><g v="nomn"/></f>
+  <f t="ивановны"><g v="sing"/><g v="gent"/></f>
+</lemma>
+
+<lemma id="63" rev="1">
+  <l t="сергеевич"><g v="NOUN"/><g v="anim"/><g v="masc"/><g v="Patr"/></l>
+  <f t="сергеевич"><g v="sing"/><g v="nomn"/></f>
+</lemma>
+
+<lemma id="64" rev="1">
+  <l t="ильич"><g v="NOUN"/><g v="anim"/><g v="masc"/><g v="Patr"/></l>
+  <f t="ильич"><g v="sing"/><g v="nomn"/></f>
+</lemma>
+
+<lemma id="65" rev="1">
+  <l t="никитич"><g v="NOUN"/><g v="anim"/><g v="masc"/><g v="Patr"/></l>
+  <f t="никитич"><g v="sing"/><g v="nomn"/></f>
+</lemma>
+
+<lemma id="66" rev="1">
+  <l t="сергеевна"><g v="NOUN"/><g v="anim"/><g v="femn"/><g v="Patr"/></l>
+  <f t="сергеевна"><g v="sing"/><g v="nomn"/></f>
+</lemma>
+
+<lemma id="67" rev="1">
+  <l t="ильинична"><g v="NOUN"/><g v="anim"/><g v="femn"/><g v="Patr"/></l>
+  <f t="ильинична"><g v="sing"/><g v="nomn"/></f>
+</lemma>
+
+<!-- ===== Proper names: surnames ===== -->
+
+<lemma id="41" rev="1">
+  <l t="иванов"><g v="NOUN"/><g v="anim"/><g v="masc"/><g v="Surn"/></l>
+  <f t="иванов"><g v="sing"/><g v="nomn"/></f>
+  <f t="иванова"><g v="sing"/><g v="gent"/></f>
+  <f t="иванову"><g v="sing"/><g v="datv"/></f>
+  <f t="ивановым"><g v="sing"/><g v="ablt"/></f>
+</lemma>
+
+<lemma id="42" rev="1">
+  <l t="иванова"><g v="NOUN"/><g v="anim"/><g v="femn"/><g v="Surn"/></l>
+  <f t="иванова"><g v="sing"/><g v="nomn"/></f>
+  <f t="ивановой"><g v="sing"/><g v="gent"/></f>
+</lemma>
+
+<lemma id="43" rev="1">
+  <l t="петров"><g v="NOUN"/><g v="anim"/><g v="masc"/><g v="Surn"/></l>
+  <f t="петров"><g v="sing"/><g v="nomn"/></f>
+  <f t="петрова"><g v="sing"/><g v="gent"/></f>
+</lemma>
+
+<lemma id="44" rev="1">
+  <l t="петрова"><g v="NOUN"/><g v="anim"/><g v="femn"/><g v="Surn"/></l>
+  <f t="петрова"><g v="sing"/><g v="nomn"/></f>
+  <f t="петровой"><g v="sing"/><g v="gent"/></f>
+</lemma>
+
+<lemma id="45" rev="1">
+  <l t="петровых"><g v="NOUN"/><g v="anim"/><g v="ms-f"/><g v="Surn"/><g v="Fixd"/></l>
+  <f t="петровых"><g v="sing"/><g v="nomn"/></f>
+</lemma>
+
+<lemma id="46" rev="1">
+  <l t="толстой"><g v="NOUN"/><g v="anim"/><g v="masc"/><g v="Surn"/></l>
+  <f t="толстой"><g v="sing"/><g v="nomn"/></f>
+  <f t="толстого"><g v="sing"/><g v="gent"/></f>
+  <f t="толстому"><g v="sing"/><g v="datv"/></f>
+</lemma>
+
+<lemma id="47" rev="1">
+  <l t="достоевский"><g v="NOUN"/><g v="anim"/><g v="masc"/><g v="Surn"/></l>
+  <f t="достоевский"><g v="sing"/><g v="nomn"/></f>
+  <f t="достоевского"><g v="sing"/><g v="gent"/></f>
+  <f t="достоевскому"><g v="sing"/><g v="datv"/></f>
+</lemma>
+
+<lemma id="68" rev="1">
+  <l t="толстая"><g v="NOUN"/><g v="anim"/><g v="femn"/><g v="Surn"/></l>
+  <f t="толстая"><g v="sing"/><g v="nomn"/></f>
+</lemma>
+
+<lemma id="69" rev="1">
+  <l t="достоевская"><g v="NOUN"/><g v="anim"/><g v="femn"/><g v="Surn"/></l>
+  <f t="достоевская"><g v="sing"/><g v="nomn"/></f>
+</lemma>
+
+<!-- ===== Indeclinable foreign first names / surnames ===== -->
+
+<lemma id="48" rev="1">
+  <l t="дюма"><g v="NOUN"/><g v="anim"/><g v="ms-f"/><g v="Surn"/><g v="Fixd"/></l>
+  <f t="дюма"><g v="sing"/><g v="nomn"/></f>
+</lemma>
+
+<lemma id="49" rev="1">
+  <l t="кобо"><g v="NOUN"/><g v="anim"/><g v="masc"/><g v="Name"/><g v="Fixd"/></l>
+  <f t="кобо"><g v="sing"/><g v="nomn"/></f>
+</lemma>
+
+<lemma id="50" rev="1">
+  <l t="гюго"><g v="NOUN"/><g v="anim"/><g v="masc"/><g v="Surn"/><g v="Fixd"/></l>
+  <f t="гюго"><g v="sing"/><g v="nomn"/></f>
+</lemma>
+
+</lemmata>
+<links>
+</links>
+</dictionary>

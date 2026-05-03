@@ -1,0 +1,6 @@
+# Локальный каталог с дампом OpenCorpora и собранным .bin — не коммитим:
+# - dict.opcorpora.xml.bz2 ~30 МБ, dict.opcorpora.xml ~500 МБ;
+# - лицензия словаря CC BY-SA, распространяется отдельно с opencorpora.org;
+# - .bin — производный артефакт сборки.
+/dict-data/
+/docs/
