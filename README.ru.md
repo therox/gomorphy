@@ -3,7 +3,7 @@
 </p>
 
 <h1 align="center">gomorphy</h1>
-
+[![Go Reference](https://pkg.go.dev/badge/github.com/therox/gomorphy.svg)](https://pkg.go.dev/github.com/therox/gomorphy)
 Словарная библиотека для русской морфологии: склонение существительных,
 прилагательных и ФИО, согласование с числительными, морфологический разбор
 словоформы.

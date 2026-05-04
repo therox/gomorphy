@@ -3,7 +3,7 @@
 </p>
 
 <h1 align="center">gomorphy</h1>
-
+[![Go Reference](https://pkg.go.dev/badge/github.com/therox/gomorphy.svg)](https://pkg.go.dev/github.com/therox/gomorphy)
 Dictionary-based library for Russian morphology: declension of nouns,
 adjectives and full names (FIO), agreement with numerals, morphological
 analysis of word forms.
