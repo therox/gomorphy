@@ -134,11 +134,12 @@ func genderFromSurname(last string) Gender {
 	return GenderUnknown
 }
 
-// declineFirst inflects a given name.
-// The name is searched among lemmas tagged Name with the desired (or
-// compatible) gender. If the dictionary has nothing or the required form
-// is missing in the paradigm — the name is returned as is (indeclinable
-// foreign).
+// declineFirst inflects a given name. The name is searched among lemmas
+// tagged Name with the desired (or compatible) gender. If the dictionary
+// has nothing or the required form is missing in the paradigm — the
+// suffix-based heuristic in firstname.go is used as a fallback. Names
+// whose shape does not match any pattern (other final vowels) are
+// returned as is.
 func declineFirst(first string, c Case, g Gender) (string, error) {
 	d, err := getDict()
 	if err != nil {
@@ -152,14 +153,17 @@ func declineFirst(first string, c Case, g Gender) (string, error) {
 		if !genderCompatible(d, l, g) {
 			continue
 		}
-		s, err := declineNoun(d, l, c, Singular)
-		if err == nil {
+		if s, err := declineNoun(d, l, c, Singular); err == nil {
 			return applyCase(first, s), nil
 		}
-		// Incomplete paradigm — return the original form (without an error).
+		// Incomplete paradigm — fall through to the heuristic.
+		break
+	}
+	s, ok := declineFirstHeuristic(strings.ToLower(first), c, g)
+	if !ok {
 		return first, nil
 	}
-	return first, nil
+	return applyCase(first, s), nil
 }
 
 // declinePatronymic inflects a patronymic: dictionary first, otherwise heuristic.
@@ -291,7 +295,7 @@ func toNominativeImpl(name FullName) (FullName, error) {
 	}
 
 	if name.First != "" {
-		nom, g, ok := firstNameNom(name.First)
+		nom, g, ok := firstNameNom(name.First, gHint)
 		if ok {
 			out.First = applyCase(name.First, nom)
 			if gHint == GenderUnknown && g != GenderUnknown && g != Common {
@@ -317,29 +321,33 @@ func toNominativeImpl(name FullName) (FullName, error) {
 	return out, nil
 }
 
-// firstNameNom reduces a given name to the nominative via the dictionary (Parse).
-// Out-of-dictionary names are returned as (s, Unknown, false), signalling
-// "leave as is".
-func firstNameNom(first string) (string, Gender, bool) {
-	d, err := getDict()
-	if err != nil {
-		return first, GenderUnknown, false
-	}
-	for _, e := range d.Lookup(first) {
-		l := &d.Lemmas[e.LemmaID]
-		if !hasTagStr(d, l.LemmaTags, "Name") {
-			continue
-		}
-		var g Gender
-		for _, t := range l.LemmaTags {
-			if gg := parseGender(d.TagString(t)); gg != GenderUnknown {
-				g = gg
-				break
+// firstNameNom reduces a given name to the nominative. Dictionary first,
+// then the suffix heuristic (inverseFirstNameHeuristic). gHint comes from
+// the patronymic processed earlier in toNominativeImpl and disambiguates
+// patterns that differ only by the lemma's gender.
+func firstNameNom(first string, gHint Gender) (string, Gender, bool) {
+	if d, err := getDict(); err == nil {
+		for _, e := range d.Lookup(first) {
+			l := &d.Lemmas[e.LemmaID]
+			if !hasTagStr(d, l.LemmaTags, "Name") {
+				continue
 			}
+			var g Gender
+			for _, t := range l.LemmaTags {
+				if gg := parseGender(d.TagString(t)); gg != GenderUnknown {
+					g = gg
+					break
+				}
+			}
+			// Filter by gHint when both sides have a definite gender.
+			if gHint != GenderUnknown && gHint != Common &&
+				g != GenderUnknown && g != Common && g != gHint {
+				continue
+			}
+			return l.Lemma, g, true
 		}
-		return l.Lemma, g, true
 	}
-	return first, GenderUnknown, false
+	return inverseFirstNameHeuristic(first, gHint)
 }
 
 // surnameNom reduces a surname to the nominative. Dictionary first,
